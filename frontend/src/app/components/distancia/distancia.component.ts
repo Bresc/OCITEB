@@ -2,17 +2,19 @@ import { Component, OnInit,NgZone } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import {ServiceService} from '../../services/service.service';
 
 @Component({
   selector: 'app-distancia',
   templateUrl: './distancia.component.html',
-  styleUrls: ['./distancia.component.css']
+  styleUrls: ['./distancia.component.css'],
+  providers : [ServiceService]
 })
 export class DistanciaComponent implements OnInit {
 
   private barChart: am4charts.XYChart;
 
-  constructor(private zone : NgZone) { }
+  constructor(private zone : NgZone,private service : ServiceService) { }
 
   ngOnInit() {
   }

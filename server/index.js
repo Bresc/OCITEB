@@ -13,8 +13,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Routes
-app.use('/api/personas', require('./routes/personas'));
-app.use('/api/facDistancia/proyectos', require('./routes/facultadDistanciaProyectos'));
+app.use('/fac', require('./routes/facultadDistancia_I01.routes'));
 
 //Starting server
 app.listen(app.get('port'), () =>{
