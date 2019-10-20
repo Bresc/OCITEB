@@ -8,7 +8,7 @@
             </button>
             <div class="dropdown-menu">  
                 <a class="dropdown-item" href="#">I01 Número de proyectos de investigación según financiación</a>
-                <a class="dropdown-item" href="#">I02 Inversión en I+D a nivel de proyectos</a>
+                <a class="dropdown-item" routerLink="/dis_i02">I02 Inversión en I+D a nivel de proyectos</a>
                 <a class="dropdown-item" href="#">I03 Inversión en I+D por tipo de entidad</a>
                 <a class="dropdown-item" href="#">I04 Inversión estímulo a productividad</a>
                 <a class="dropdown-item" href="#">I05 Ingresos recursos propios posgrados</a>
@@ -51,12 +51,13 @@
         </div>
     </div>
     <div class="col-md-12 mt-4">
-        <h1>Facultad de Estudios a Distancia</h1>
         <div class="container">
+            <div class="row"><h1>Facultad de Estudios a Distancia</h1></div>
+            <div class="row"> <h3>I01. Numero de proyectos de investigación según financiación</h3> </div>
             <div class="row">
-                <div class="col" id="barChart" style="width: 700px; height: 500px">
+                <div class="col mt-4" id="barChart" style="width: 700px; height: 500px">
                 </div>
-                <div class="col" id="chart" >
+                <div class="col mt-4" id="chart">
                     <table class="table table-striped table-bordered" >
                         <thead>
                             <tr>
@@ -70,45 +71,45 @@
                         <tbody>
                             <tr>
                                 <td>2014</td>
-                                <td>1</td>
-                                <td>0</td>
-                                <td>2</td>
-                                <td>3</td>
+                                <td>{{semilla2014}}</td>
+                                <td>{{contra2014}}</td>
+                                <td>{{sinfin2014}}</td>
+                                <td>{{anio2014}}</td>
                             </tr>
                             <tr>
                                 <td>2015</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>2</td>
-                                <td>2</td>
+                                <td>{{semilla2015}}</td>
+                                <td>{{contra2015}}</td>
+                                <td>{{sinfin2015}}</td>
+                                <td>{{anio2015}}</td>
                             </tr>
                             <tr>
                                 <td>2016</td>
-                                <td>0</td>
-                                <td>0</td>
-                                <td>1</td>
-                                <td>1</td>
+                                <td>{{semilla2016}}</td>
+                                <td>{{contra2016}}</td>
+                                <td>{{sinfin2016}}</td>
+                                <td>{{anio2016}}</td>
                             </tr>
                             <tr>
                                 <td>2017</td>
-                                <td>7</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td>10</td>
+                                <td>{{semilla2017}}</td>
+                                <td>{{contra2017}}</td>
+                                <td>{{sinfin2017}}</td>
+                                <td>{{anio2017}}</td>
                             </tr>
                             <tr>
                                 <td>2018</td>
-                                <td>5</td>
-                                <td>1</td>
-                                <td>4</td>
-                                <td>10</td>
+                                <td>{{semilla2018}}</td>
+                                <td>{{contra2018}}</td>
+                                <td>{{sinfin2018}}</td>
+                                <td>{{anio2018}}</td>
                             </tr>
                             <tr>
                                 <td>Total</td>
-                                <td>13</td>
-                                <td>2</td>
-                                <td>11</td>
-                                <td>26</td>
+                                <td>{{semilla2014+semilla2015+semilla2016+semilla2017+semilla2018}}</td>
+                                <td>{{contra2014+contra2015+contra2016+contra2017+contra2018}}</td>
+                                <td>{{sinfin2014+sinfin2015+sinfin2016+sinfin2017+sinfin2018}}</td>
+                                <td>{{anio2014+anio2015+anio2016+anio2017+anio2018}}</td>
                             </tr>
                         </tbody>
                     </table>

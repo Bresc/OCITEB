@@ -10,6 +10,7 @@ import { DistanciaComponent } from './components/distancia/distancia.component';
 import { ChiquinquiraComponent } from './components/chiquinquira/chiquinquira.component';
 import { DuitamaComponent } from './components/duitama/duitama.component';
 import { SogamosoComponent } from './components/sogamoso/sogamoso.component';
+import { FacDisI02Component } from './components/distancia/fac-dis-i02/fac-dis-i02.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -20,6 +21,7 @@ const routes: Routes = [
     {path: 'ciencias', component: CienciasComponent},
     {path: 'derecho', component: DerechoComponent},
     {path: 'distancia', component: DistanciaComponent},
+    {path: 'dis_i02', component:FacDisI02Component},
     {path: 'chiquinquira', component: ChiquinquiraComponent},
     {path: 'duitama', component: DuitamaComponent},
     {path: 'sogamoso', component: SogamosoComponent}
@@ -34,5 +36,6 @@ export class AppRoutingModule{ }
 export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  EducacionComponent, EconomicasComponent,
                                  CienciasComponent, DerechoComponent,
-                                 DistanciaComponent, ChiquinquiraComponent,
+                                 DistanciaComponent, FacDisI02Component,
+                                 ChiquinquiraComponent,
                                  DuitamaComponent, SogamosoComponent]
