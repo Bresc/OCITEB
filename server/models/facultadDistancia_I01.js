@@ -3,7 +3,7 @@ const {Schema} = mongoose;
 
 const FacultadDistanciaI01 = new Schema ({
     PROYECTO: {type: String, required: true},
-    ANIOOEJECUCION: {type: String, required: true},
+    ANIOEJECUCION: {type: String, required: true},
     TIPOFINANCIACION: {type: String, required:true}
 });
 
