@@ -56,27 +56,37 @@ export class FacDisI02Component implements OnInit {
         if(parseInt(array[_i].ANIOEJECUCION)==2014){
             this.especie2014+=parseInt(array[_i].MONTOESPECIEINTERNO);
             this.externo2014+=parseInt(array[_i].MONTOEXTERNO1);
-            this.externo2014+=parseInt(array[_i].MONTOEXTERNO2);
+            if(!isNaN(parseInt(array[_i].MONTOEXTERNO2))){
+              this.externo2014+=parseInt(array[_i].MONTOEXTERNO2);
+            }
             this.efectivo2014+=parseInt(array[_i].MONTOEFECTIVOINTERNO);
         }else if(parseInt(array[_i].ANIOEJECUCION)==2015){
           this.especie2015+=parseInt(array[_i].MONTOESPECIEINTERNO);
           this.externo2015+=parseInt(array[_i].MONTOEXTERNO1);
-          this.externo2015+=parseInt(array[_i].MONTOEXTERNO2);
+          if(!isNaN(parseInt(array[_i].MONTOEXTERNO2))){
+            this.externo2015+=parseInt(array[_i].MONTOEXTERNO2);
+          }
           this.efectivo2015+=parseInt(array[_i].MONTOEFECTIVOINTERNO);
         }else if(parseInt(array[_i].ANIOEJECUCION)==2016){
           this.especie2016+=parseInt(array[_i].MONTOESPECIEINTERNO);
           this.externo2016+=parseInt(array[_i].MONTOEXTERNO1);
-          this.externo2016+=parseInt(array[_i].MONTOEXTERNO2);
+          if(!isNaN(parseInt(array[_i].MONTOEXTERNO2))){
+            this.externo2016+=parseInt(array[_i].MONTOEXTERNO2);
+          }
           this.efectivo2016+=parseInt(array[_i].MONTOEFECTIVOINTERNO);
         }else if(parseInt(array[_i].ANIOEJECUCION)==2017){
           this.especie2017+=parseInt(array[_i].MONTOESPECIEINTERNO);
           this.externo2017+=parseInt(array[_i].MONTOEXTERNO1);
-          this.externo2017+=parseInt(array[_i].MONTOEXTERNO2);
+          if(!isNaN(parseInt(array[_i].MONTOEXTERNO2))){
+            this.externo2017+=parseInt(array[_i].MONTOEXTERNO2);
+          }
           this.efectivo2017+=parseInt(array[_i].MONTOEFECTIVOINTERNO);
         }else if(parseInt(array[_i].ANIOEJECUCION)==2018){
           this.especie2018+=parseInt(array[_i].MONTOESPECIEINTERNO);
           this.externo2018+=parseInt(array[_i].MONTOEXTERNO1);
-          this.externo2018+=parseInt(array[_i].MONTOEXTERNO2);
+          if(!isNaN(parseInt(array[_i].MONTOEXTERNO2))){
+            this.externo2018+=parseInt(array[_i].MONTOEXTERNO2);
+          }
           this.efectivo2018+=parseInt(array[_i].MONTOEFECTIVOINTERNO);
         }
     }

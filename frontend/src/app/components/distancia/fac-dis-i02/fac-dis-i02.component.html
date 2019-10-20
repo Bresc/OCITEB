@@ -7,12 +7,12 @@
                         Inversion
                 </button>
                 <div class="dropdown-menu">  
-                    <a class="dropdown-item" href="#">I01 Número de proyectos de investigación según financiación</a>
-                    <a class="dropdown-item" href="#">I02 Inversión en I+D a nivel de proyectos</a>
-                    <a class="dropdown-item" href="#">I03 Inversión en I+D por tipo de entidad</a>
-                    <a class="dropdown-item" href="#">I04 Inversión estímulo a productividad</a>
-                    <a class="dropdown-item" href="#">I05 Ingresos recursos propios posgrados</a>
-                    <a class="dropdown-item" href="#">I06 Ingresos por extensión y proyección social</a>
+                    <a class="dropdown-item" routerLink="/distancia">I01 Número de proyectos de investigación según financiación</a>
+                    <a class="dropdown-item" routerLink="/dis_i02">I02 Inversión en I+D a nivel de proyectos</a>
+                    <a class="dropdown-item" routerLink="/dis_i03">I03 Inversión en I+D por tipo de entidad</a>
+                    <a class="dropdown-item" routerLink="/dis_i04">I04 Inversión estímulo a productividad</a>
+                    <a class="dropdown-item" routerLink="/dis_i05">I05 Ingresos recursos propios posgrados</a>
+                    <a class="dropdown-item" routerLink="/dis_i06">I06 Ingresos por extensión y proyección social</a>
                 </div>
             </div>
             <div class="btn-group">
@@ -54,9 +54,9 @@
             <div class="container">
                 <div class="row"><h1>Facultad de Estudios a Distancia</h1></div>
                 <div class="row"> <h3>I02. Inversión en I+D a nivel de proyectos</h3> </div>
-                <div class="row" id="barChart" style="width: 700px; height: 500px">
+                <div class="row" id="barChart" style="width: 170%; height: 500px">
                 </div>
-                <div class="row">
+                <div class="row" style="width: 170%; height: 500px">
                     <div class="col mt-4" id="chart">
                         <table class="table table-striped table-bordered" >
                             <thead class="thead-dark">
@@ -109,13 +109,13 @@
                                     <td>{{especie2014+especie2015+especie2016+especie2017+especie2018}}</td>
                                     <td>{{efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018}}</td>
                                     <td>{{externo2014+externo2015+externo2016+externo2017+externo2018}}</td>
-                                    <td>totalxd</td>
+                                    <td>{{especie2014+especie2015+especie2016+especie2017+especie2018+efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018+externo2014+externo2015+externo2016+externo2017+externo2018}}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             
-            <div id="chartdiv" style="width: 100%; height: 600px;"> </div>
+            
         </div>
     </div>

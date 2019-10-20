@@ -11,6 +11,10 @@ import { ChiquinquiraComponent } from './components/chiquinquira/chiquinquira.co
 import { DuitamaComponent } from './components/duitama/duitama.component';
 import { SogamosoComponent } from './components/sogamoso/sogamoso.component';
 import { FacDisI02Component } from './components/distancia/fac-dis-i02/fac-dis-i02.component';
+import { FacDisI03Component } from './components/distancia/fac-dis-i03/fac-dis-i03.component';
+import { FacDisI04Component } from './components/distancia/fac-dis-i04/fac-dis-i04.component';
+import { FacDisI05Component } from './components/distancia/fac-dis-i05/fac-dis-i05.component';
+import { FacDisI06Component } from './components/distancia/fac-dis-i06/fac-dis-i06.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -21,8 +25,9 @@ const routes: Routes = [
     {path: 'ciencias', component: CienciasComponent},
     {path: 'derecho', component: DerechoComponent},
     {path: 'distancia', component: DistanciaComponent},
-    {path: 'dis_i02', component:FacDisI02Component},
-    {path: 'chiquinquira', component: ChiquinquiraComponent},
+    {path: 'dis_i02', component:FacDisI02Component},{path: 'dis_i03', component:FacDisI03Component},
+    {path: 'dis_i04', component:FacDisI04Component},{path: 'dis_i05', component:FacDisI05Component},
+    {path: 'chiquinquira', component: ChiquinquiraComponent},{path: 'dis_i06', component:FacDisI06Component},
     {path: 'duitama', component: DuitamaComponent},
     {path: 'sogamoso', component: SogamosoComponent}
     ]
@@ -37,5 +42,6 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  EducacionComponent, EconomicasComponent,
                                  CienciasComponent, DerechoComponent,
                                  DistanciaComponent, FacDisI02Component,
-                                 ChiquinquiraComponent,
+                                 FacDisI03Component,FacDisI04Component,ChiquinquiraComponent,
+                                 FacDisI05Component, FacDisI06Component,
                                  DuitamaComponent, SogamosoComponent]
