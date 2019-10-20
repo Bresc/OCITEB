@@ -42,6 +42,20 @@ app.use('/facAgro/c02', require('./routes/facultadAgro_c02.routes'));
 
 //Routes Fac Educacion
 
+app.use('/facEdu/i01', require('./routes/facultadEdu_I01.routes'));
+app.use('/facEdu/i02', require('./routes/facultadEdu_I02.routes'));
+app.use('/facEdu/i03', require('./routes/facultadEdu_I03.routes'));
+app.use('/facEdu/i04', require('./routes/facultadEdu_I04.routes'));
+app.use('/facEdu/i05', require('./routes/facultadEdu_I05.routes'));
+app.use('/facEdu/i06', require('./routes/facultadEdu_I06.routes'));
+
+app.use('/facEdu/f01', require('./routes/facultadEdu_f01.routes'));
+app.use('/facEdu/f02', require('./routes/facultadEdu_f02.routes'));
+app.use('/facEdu/f03', require('./routes/facultadEdu_f03.routes'));
+
+app.use('/facEdu/c01', require('./routes/facultadEdu_c01.routes'));
+app.use('/facEdu/c02', require('./routes/facultadEdu_c02.routes'));
+
 //Starting server
 app.listen(app.get('port'), () =>{
     console.log('Server iniciado en ', app.get('port'));
