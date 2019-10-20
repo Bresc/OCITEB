@@ -25,6 +25,23 @@ app.use('/facDistancia/f03', require('./routes/facultadDistancia_f03.routes'));
 app.use('/facDistancia/c01', require('./routes/facultadDistancia_c01.routes'));
 app.use('/facDistancia/c02', require('./routes/facultadDistancia_c02.routes'));
 
+//Routes Fac Agropecuaria
+app.use('/facAgro/i01', require('./routes/facultadAgro_I01.routes'));
+app.use('/facAgro/i02', require('./routes/facultadAgro_I02.routes'));
+app.use('/facAgro/i03', require('./routes/facultadAgro_I03.routes'));
+app.use('/facAgro/i04', require('./routes/facultadAgro_I04.routes'));
+app.use('/facAgro/i05', require('./routes/facultadAgro_I05.routes'));
+app.use('/facAgro/i06', require('./routes/facultadAgro_I06.routes'));
+
+app.use('/facAgro/f01', require('./routes/facultadAgro_f01.routes'));
+app.use('/facAgro/f02', require('./routes/facultadAgro_f02.routes'));
+app.use('/facAgro/f03', require('./routes/facultadAgro_f03.routes'));
+
+app.use('/facAgro/c01', require('./routes/facultadAgro_c01.routes'));
+app.use('/facAgro/c02', require('./routes/facultadAgro_c02.routes'));
+
+//Routes Fac Educacion
+
 //Starting server
 app.listen(app.get('port'), () =>{
     console.log('Server iniciado en ', app.get('port'));
