@@ -15,6 +15,13 @@ import { FacDisI03Component } from './components/distancia/fac-dis-i03/fac-dis-i
 import { FacDisI04Component } from './components/distancia/fac-dis-i04/fac-dis-i04.component';
 import { FacDisI05Component } from './components/distancia/fac-dis-i05/fac-dis-i05.component';
 import { FacDisI06Component } from './components/distancia/fac-dis-i06/fac-dis-i06.component';
+import { FacDisF01Component } from './components/distancia/fac-dis-f01/fac-dis-f01.component';
+import { FacDisF02Component } from './components/distancia/fac-dis-f02/fac-dis-f02.component';
+import { FacDisF03Component } from './components/distancia/fac-dis-f03/fac-dis-f03.component';
+import { FacDisC01Component } from './components/distancia/fac-dis-c01/fac-dis-c01.component';
+import { FacDisC02Component } from './components/distancia/fac-dis-c02/fac-dis-c02.component';
+import { FacDisC021Component } from './components/distancia/fac-dis-c021/fac-dis-c021.component';
+import { FacDisPb03Component } from './components/distancia/fac-dis-pb03/fac-dis-pb03.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -28,7 +35,10 @@ const routes: Routes = [
     {path: 'dis_i02', component:FacDisI02Component},{path: 'dis_i03', component:FacDisI03Component},
     {path: 'dis_i04', component:FacDisI04Component},{path: 'dis_i05', component:FacDisI05Component},
     {path: 'chiquinquira', component: ChiquinquiraComponent},{path: 'dis_i06', component:FacDisI06Component},
-    {path: 'duitama', component: DuitamaComponent},
+    {path: 'dis_f01', component: FacDisF01Component},{path: 'dis_f02', component: FacDisF02Component},
+    {path: 'duitama', component: DuitamaComponent},{path:'dis_f03', component:FacDisF03Component},
+    {path: 'dis_c01', component: FacDisC01Component},{path:'dis_c02', component: FacDisC02Component},
+    {path: 'dis_c021', component: FacDisC021Component},{path:'dis_pb03',component: FacDisPb03Component},
     {path: 'sogamoso', component: SogamosoComponent}
     ]
 
@@ -43,5 +53,7 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  CienciasComponent, DerechoComponent,
                                  DistanciaComponent, FacDisI02Component,
                                  FacDisI03Component,FacDisI04Component,ChiquinquiraComponent,
-                                 FacDisI05Component, FacDisI06Component,
+                                 FacDisI05Component, FacDisI06Component, FacDisF01Component,
+                                 FacDisF02Component,FacDisF03Component, FacDisC01Component,
+                                 FacDisC02Component,FacDisC021Component,FacDisPb03Component,
                                  DuitamaComponent, SogamosoComponent]

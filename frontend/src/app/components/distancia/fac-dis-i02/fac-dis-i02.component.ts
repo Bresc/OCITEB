@@ -40,7 +40,6 @@ export class FacDisI02Component implements OnInit {
     this.service.getFacDistanciaI01()
           .subscribe(res=>{
              this.service.facDisI02Array = res as FacDistanciaI02[];
-             console.log(this.service.facDisI02Array[0].PROYECTO);
              this.createChart();
              this.countAportes();
           });

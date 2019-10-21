@@ -7,13 +7,14 @@ import { BackgroundComponent } from './components/background/background.componen
 import {HttpClientModule} from '@angular/common/http'
 
 import {AppRoutingModule,routingComponents} from './app-routing.module';
-
+import { FacDisPb03Component } from './components/distancia/fac-dis-pb03/fac-dis-pb03.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundComponent,
-    routingComponents
+    routingComponents,
+    FacDisPb03Component
   ],
   imports: [
     BrowserModule,

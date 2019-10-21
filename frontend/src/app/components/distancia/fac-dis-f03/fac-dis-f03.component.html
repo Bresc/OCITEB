@@ -53,38 +53,42 @@
     <div class="col-md-12 mt-4">
         <div class="container">
             <div class="row"><h1>Facultad de Estudios a Distancia</h1></div>
-            <div class="row"> <h3>I05. Ingresos recursos propios posgrados</h3> </div>
-            <div class="row mt-5" id="barChart" style="width: 170%; height: 500px">
+            <div class="row"> <h3>F03. Semilleros de investigación</h3> </div>
+            <div class="row" id="barChart" style="width: 170%; height: 500px">
             </div>
-            <div class="row mt-5" style="width: 170%; height: 500px">
-                <div class="col col-12" id="chart">
+            <div class="row" style="width: 170%; height: 500px">
+                <div class="col mt-4" id="chart">
                     <table class="table table-striped table-bordered" >
                         <thead class="thead-dark">
                             <tr>
                                 <th>Año</th>
-                                <th>Aporte</th>
+                                <th>N° Jovenes Investigadores</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>2014</td>
-                                <td>{{aport2014}}</td>
+                                <td>{{investi2014}}</td>
                             </tr>
                             <tr>
                                 <td>2015</td>
-                                <td>{{aport2015}}</td>
+                                <td>{{investi2015}}</td>
                             </tr>
                             <tr>
                                 <td>2016</td>
-                                <td>{{aport2016}}</td>
+                                <td>{{investi2016}}</td>
                             </tr>
                             <tr>
                                 <td>2017</td>
-                                <td>{{aport2017}}</td>
+                                <td>{{investi2017}}</td>
                             </tr>
                             <tr>
                                 <td>2018</td>
-                                <td>{{aport2018}}</td>
+                                <td>{{investi2018}}</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>{{investi2014+investi2015+investi2016+investi2017+investi2018}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -94,3 +98,4 @@
         
     </div>
 </div>
+
