@@ -25,7 +25,6 @@ export class FacDisI03Component implements OnInit {
              this.service.facDisI03Array = res as FacDistanciaI03[];
              this.countAportes();
              this.createChart();
-             this.countAportes();
           });
   }
 

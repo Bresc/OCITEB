@@ -11,6 +11,10 @@ import { FacDistanciaC01 } from '../models/fac-distancia-c01';
 import { FacDistanciaC02 } from '../models/fac-distancia-c02';
 import { FacAgropecuariaI01 } from '../models/fac-agropecuaria-i01';
 import { FacAgropecuariaI02 } from '../models/fac-agropecuaria-i02';
+import { FacAgropecuariaI03 } from '../models/fac-agropecuaria-i03';
+import { FacAgropecuariaI04 } from '../models/fac-agropecuaria-i04';
+import { FacAgropecuariaI05 } from '../models/fac-agropecuaria-i05';
+import { FacAgropecuariaI06 } from '../models/fac-agropecuaria-i06';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +31,11 @@ export class ServiceService {
   facDisC01Array: FacDistanciaC01[];
   facDisC02Array: FacDistanciaC02[];
   facAgroI01Array: FacAgropecuariaI01[];
-  facAgroI02Array: FacAgropecuariaI02[]; 
+  facAgroI02Array: FacAgropecuariaI02[];
+  facAgroI03Array: FacAgropecuariaI03[];
+  facAgroI04Array: FacAgropecuariaI04[];
+  facAgroI05Array: FacAgropecuariaI05[];
+  facAgroI06Array: FacAgropecuariaI06[]; 
 
   constructor(private http: HttpClient) {
    }
@@ -76,6 +84,21 @@ export class ServiceService {
     return this.http.get('http://localhost:3000/facAgro/i02');
   }
 
+  getFacAgropecuariaI03(){
+    return this.http.get('http://localhost:3000/facAgro/i03');
+  }
+  
+  getFacAgropecuariaI04(){
+    return this.http.get('http://localhost:3000/facAgro/i04');
+  }
+
+  getFacAgropecuariaI05(){
+    return this.http.get('http://localhost:3000/facAgro/i05');
+  }
+
+  getFacAgropecuariaI06(){
+    return this.http.get('http://localhost:3000/facAgro/i06');
+  }
 
 
 

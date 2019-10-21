@@ -73,7 +73,7 @@ app.use('/facEco/f03', require('./routes/facultadEco_f03.routes'));
 app.use('/facEco/c01', require('./routes/facultadEco_c01.routes'));
 app.use('/facEco/c02', require('./routes/facultadEco_c02.routes'));
 
-//Routes Fac Economia y Admin
+//Routes Fac Ciencias
 
 app.use('/facCien/i01', require('./routes/facultadCien_I01.routes'));
 app.use('/facCien/i02', require('./routes/facultadCien_I02.routes'));
@@ -91,6 +91,20 @@ app.use('/facCien/c02', require('./routes/facultadCien_c02.routes'));
 app.use('/facCien/c0201', require('./routes/facultadCien_C0201.routes'));
 
 app.use('/facCien/pb03', require('./routes/facultadCien_PB03.routes'));
+
+//Routes Fac Derecho
+
+app.use('/facDer/i01', require('./routes/facultadDer_I01.routes'));
+app.use('/facDer/i02', require('./routes/facultadDer_I02.routes'));
+app.use('/facDer/i05', require('./routes/facultadDer_I05.routes'));
+app.use('/facDer/i06', require('./routes/facultadDer_I06.routes'));
+
+app.use('/facDer/f01', require('./routes/facultadDer_f01.routes'));
+app.use('/facDer/f03', require('./routes/facultadDer_f03.routes'));
+
+app.use('/facDer/c01', require('./routes/facultadDer_c01.routes'));
+app.use('/facDer/c02', require('./routes/facultadDer_c02.routes'));
+
 
 //Starting server
 app.listen(app.get('port'), () =>{
