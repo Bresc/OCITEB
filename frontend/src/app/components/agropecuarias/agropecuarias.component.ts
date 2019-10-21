@@ -2,6 +2,8 @@ import { Component, OnInit, NgZone } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+import {ServiceService} from '../../services/service.service';
+import { FacAgropecuariaI01 } from 'src/app/models/fac-agropecuaria-i01';
 
 am4core.useTheme(am4themes_animated);
 
@@ -18,21 +20,46 @@ am4core.useTheme(am4themes_animated);
 export class AgropecuariasComponent implements OnInit {
 
   private barChart: am4charts.XYChart;
-  
-  constructor(private zone : NgZone) { 
+  private anio2014=0;
+  private anio2015=0;
+  private anio2016=0;
+  private anio2017=0;
+  private anio2018=0;
 
+  private semilla2014=0;
+  private semilla2015=0;
+  private semilla2016=0;
+  private semilla2017=0;
+  private semilla2018=0;
+
+  private contra2014=0;
+  private contra2015=0;
+  private contra2016=0;
+  private contra2017=0;
+  private contra2018=0;
+
+  private sinfin2014=0;
+  private sinfin2015=0;
+  private sinfin2016=0;
+  private sinfin2017=0;
+  private sinfin2018=0;
+
+  constructor(private zone : NgZone,private service : ServiceService) { 
     
   }
 
-
-
-  
-
-
   ngOnInit() {
+    this.service.getFacAgropecuariaI01()
+          .subscribe(res=>{
+             this.service.facAgroI01Array = res as FacAgropecuariaI01[];
+             this.countAnios();
+             this.createChart();
+          });
+    
+          
   }
 
-  ngAfterViewInit() {
+  createChart(){
     this.zone.runOutsideAngular(() => {
       let chart = am4core.create("barChart", am4charts.XYChart);
   
@@ -41,19 +68,19 @@ export class AgropecuariasComponent implements OnInit {
 
       chart.data = [{
         "Año": "2014",
-        "Num": 3
+        "Num": this.anio2014
       }, {
         "Año": "2015",
-        "Num": 2
+        "Num": this.anio2015
       }, {
         "Año": "2016",
-        "Num": 1
+        "Num": this.anio2016
       }, {
         "Año": "2017",
-        "Num": 10
+        "Num": this.anio2017
       }, {
         "Año": "2018",
-        "Num": 10
+        "Num": this.anio2018
       }];
 
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
@@ -64,7 +91,7 @@ export class AgropecuariasComponent implements OnInit {
       valueAxis.title.text = "Num Proyectos";
       
       let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Proyectos";
+    series.name = "Num";
     series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
     series.columns.template.fill = am4core.color("#104547"); // fill
     series.dataFields.valueY = "Num";
@@ -74,13 +101,66 @@ export class AgropecuariasComponent implements OnInit {
     });
   }
 
-  ngOnDestroy() {
-    this.zone.runOutsideAngular(() => {
-      if (this.barChart) {
-        this.barChart.dispose();
+  countAnios(){
+    const array =  this.service.facAgroI01Array as FacAgropecuariaI01[];
+    for (var _i = 0; _i < array.length; _i++) {
+        //console.log(array[_i].ANIOEJECUCION);
+        if(parseInt(array[_i].ANIOEJECUCION)==2014){
+            this.anio2014++;
+            if(array[_i].TIPOFINANCIACION==="CAPITAL SEMILLA"){
+                this.semilla2014++;
+            }else if(array[_i].TIPOFINANCIACION==="CONTRAPARTIDA"){
+                this.contra2014++;
+            }else if(array[_i].TIPOFINANCIACION==="SIN FINANCIACION"){
+              this.sinfin2014++;
+            }
+        }else if(parseInt(array[_i].ANIOEJECUCION)==2015){
+            this.anio2015++;
+            if(array[_i].TIPOFINANCIACION==="CAPITAL SEMILLA"){
+              this.semilla2015++;
+            }else if(array[_i].TIPOFINANCIACION==="CONTRAPARTIDA"){
+              this.contra2015++;
+            }else if(array[_i].TIPOFINANCIACION==="SIN FINANCIACION"){
+            this.sinfin2015++;
+            }
+        }else if(parseInt(array[_i].ANIOEJECUCION)==2016){
+            this.anio2016++;
+            if(array[_i].TIPOFINANCIACION==="CAPITAL SEMILLA"){
+              this.semilla2016++;
+            }else if(array[_i].TIPOFINANCIACION==="CONTRAPARTIDA"){
+              this.contra2016++;
+            }else if(array[_i].TIPOFINANCIACION==="SIN FINANCIACION"){
+            this.sinfin2016++;
+            }
+        }else if(parseInt(array[_i].ANIOEJECUCION)==2017){
+          this.anio2017++;
+          if(array[_i].TIPOFINANCIACION==="CAPITAL SEMILLA"){
+            this.semilla2017++;
+          }else if(array[_i].TIPOFINANCIACION==="CONTRAPARTIDA"){
+            this.contra2017++;
+          }else if(array[_i].TIPOFINANCIACION==="SIN FINANCIACION"){
+          this.sinfin2017++;
+          }
+        }else if(parseInt(array[_i].ANIOEJECUCION)==2018){
+          this.anio2018++;
+          if(array[_i].TIPOFINANCIACION==="CAPITAL SEMILLA"){
+            this.semilla2018++;
+          }else if(array[_i].TIPOFINANCIACION==="CONTRAPARTIDA"){
+            this.contra2018++;
+          }else if(array[_i].TIPOFINANCIACION==="SIN FINANCIACION"){
+          this.sinfin2018++;
+          }
       }
-    });
+    }
+
+
+
   }
+
+ 
+
+
+
   
 
   

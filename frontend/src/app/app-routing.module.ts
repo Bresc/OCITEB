@@ -22,11 +22,13 @@ import { FacDisC01Component } from './components/distancia/fac-dis-c01/fac-dis-c
 import { FacDisC02Component } from './components/distancia/fac-dis-c02/fac-dis-c02.component';
 import { FacDisC021Component } from './components/distancia/fac-dis-c021/fac-dis-c021.component';
 import { FacDisPb03Component } from './components/distancia/fac-dis-pb03/fac-dis-pb03.component';
+import { FacAgroI02Component } from './components/agropecuarias/fac-agro-i02/fac-agro-i02.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
     {path: 'home', component: CarouselComponent},
     {path: 'agropecuarias', component: AgropecuariasComponent},
+    {path: 'agro_i02', component: FacAgroI02Component},
     {path: 'educacion', component: EducacionComponent},
     {path: 'economicas', component: EconomicasComponent},
     {path: 'ciencias', component: CienciasComponent},
@@ -56,4 +58,5 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  FacDisI05Component, FacDisI06Component, FacDisF01Component,
                                  FacDisF02Component,FacDisF03Component, FacDisC01Component,
                                  FacDisC02Component,FacDisC021Component,FacDisPb03Component,
+                                 FacAgroI02Component,
                                  DuitamaComponent, SogamosoComponent]

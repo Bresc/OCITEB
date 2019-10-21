@@ -9,6 +9,8 @@ import { FacDistanciaI06 } from '../models/fac-distancia-i06';
 import { FacDistanciaF03 } from '../models/fac-distancia-f03';
 import { FacDistanciaC01 } from '../models/fac-distancia-c01';
 import { FacDistanciaC02 } from '../models/fac-distancia-c02';
+import { FacAgropecuariaI01 } from '../models/fac-agropecuaria-i01';
+import { FacAgropecuariaI02 } from '../models/fac-agropecuaria-i02';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +26,8 @@ export class ServiceService {
   facDisF03Array: FacDistanciaF03[];
   facDisC01Array: FacDistanciaC01[];
   facDisC02Array: FacDistanciaC02[];
+  facAgroI01Array: FacAgropecuariaI01[];
+  facAgroI02Array: FacAgropecuariaI02[]; 
 
   constructor(private http: HttpClient) {
    }
@@ -62,6 +66,14 @@ export class ServiceService {
 
   getFacDistanciaC02(){
     return this.http.get('http://localhost:3000/facDistancia/c02');
+  }
+
+  getFacAgropecuariaI01(){
+    return this.http.get('http://localhost:3000/facAgro/i01');
+  }
+
+  getFacAgropecuariaI02(){
+    return this.http.get('http://localhost:3000/facAgro/i02');
   }
 
 
