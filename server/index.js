@@ -73,6 +73,25 @@ app.use('/facEco/f03', require('./routes/facultadEco_f03.routes'));
 app.use('/facEco/c01', require('./routes/facultadEco_c01.routes'));
 app.use('/facEco/c02', require('./routes/facultadEco_c02.routes'));
 
+//Routes Fac Economia y Admin
+
+app.use('/facCien/i01', require('./routes/facultadCien_I01.routes'));
+app.use('/facCien/i02', require('./routes/facultadCien_I02.routes'));
+app.use('/facCien/i03', require('./routes/facultadCien_I03.routes'));
+app.use('/facCien/i04', require('./routes/facultadCien_I04.routes'));
+app.use('/facCien/i05', require('./routes/facultadCien_I05.routes'));
+app.use('/facCien/i06', require('./routes/facultadCien_I06.routes'));
+
+app.use('/facCien/f01', require('./routes/facultadCien_f01.routes'));
+app.use('/facCien/f02', require('./routes/facultadCien_f02.routes'));
+app.use('/facCien/f03', require('./routes/facultadCien_f03.routes'));
+
+app.use('/facCien/c01', require('./routes/facultadCien_c01.routes'));
+app.use('/facCien/c02', require('./routes/facultadCien_c02.routes'));
+app.use('/facCien/c0201', require('./routes/facultadCien_C0201.routes'));
+
+app.use('/facCien/pb03', require('./routes/facultadCien_PB03.routes'));
+
 //Starting server
 app.listen(app.get('port'), () =>{
     console.log('Server iniciado en ', app.get('port'));
