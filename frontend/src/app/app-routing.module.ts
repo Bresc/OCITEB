@@ -23,12 +23,18 @@ import { FacDisC02Component } from './components/distancia/fac-dis-c02/fac-dis-c
 import { FacDisC021Component } from './components/distancia/fac-dis-c021/fac-dis-c021.component';
 import { FacDisPb03Component } from './components/distancia/fac-dis-pb03/fac-dis-pb03.component';
 import { FacAgroI02Component } from './components/agropecuarias/fac-agro-i02/fac-agro-i02.component';
+import { FacAgroI04Component } from './components/agropecuarias/fac-agro-i04/fac-agro-i04.component';
+import { FacAgroI03Component } from './components/agropecuarias/fac-agro-i03/fac-agro-i03.component';
+import { FacAgroI05Component } from './components/agropecuarias/fac-agro-i05/fac-agro-i05.component';
+import { FacAgroI06Component } from './components/agropecuarias/fac-agro-i06/fac-agro-i06.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
     {path: 'home', component: CarouselComponent},
     {path: 'agropecuarias', component: AgropecuariasComponent},
     {path: 'agro_i02', component: FacAgroI02Component},
+    {path: 'agro_i04', component: FacAgroI04Component},{path: 'agro_i03', component: FacAgroI03Component},
+    {path: 'agro_i05', component: FacAgroI05Component},{path: 'agro_i06', component: FacAgroI06Component},
     {path: 'educacion', component: EducacionComponent},
     {path: 'economicas', component: EconomicasComponent},
     {path: 'ciencias', component: CienciasComponent},
@@ -58,5 +64,6 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  FacDisI05Component, FacDisI06Component, FacDisF01Component,
                                  FacDisF02Component,FacDisF03Component, FacDisC01Component,
                                  FacDisC02Component,FacDisC021Component,FacDisPb03Component,
-                                 FacAgroI02Component,
+                                 FacAgroI02Component,FacAgroI03Component,FacAgroI04Component,
+                                 FacAgroI05Component,FacAgroI06Component,
                                  DuitamaComponent, SogamosoComponent]
