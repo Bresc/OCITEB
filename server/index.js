@@ -56,6 +56,23 @@ app.use('/facEdu/f03', require('./routes/facultadEdu_f03.routes'));
 app.use('/facEdu/c01', require('./routes/facultadEdu_c01.routes'));
 app.use('/facEdu/c02', require('./routes/facultadEdu_c02.routes'));
 
+
+//Routes Fac Economia y Admin
+
+app.use('/facEco/i01', require('./routes/facultadEco_I01.routes'));
+app.use('/facEco/i02', require('./routes/facultadEco_I02.routes'));
+app.use('/facEco/i03', require('./routes/facultadEco_I03.routes'));
+app.use('/facEco/i04', require('./routes/facultadEco_I04.routes'));
+app.use('/facEco/i05', require('./routes/facultadEco_I05.routes'));
+app.use('/facEco/i06', require('./routes/facultadEco_I06.routes'));
+
+app.use('/facEco/f01', require('./routes/facultadEco_f01.routes'));
+app.use('/facEco/f02', require('./routes/facultadEco_f02.routes'));
+app.use('/facEco/f03', require('./routes/facultadEco_f03.routes'));
+
+app.use('/facEco/c01', require('./routes/facultadEco_c01.routes'));
+app.use('/facEco/c02', require('./routes/facultadEco_c02.routes'));
+
 //Starting server
 app.listen(app.get('port'), () =>{
     console.log('Server iniciado en ', app.get('port'));
