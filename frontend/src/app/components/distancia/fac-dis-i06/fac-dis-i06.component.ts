@@ -23,6 +23,7 @@ export class FacDisI06Component implements OnInit {
       this.service.getFacDistanciaI06()
           .subscribe(res=>{
               this.service.facDisI06Array = res as FacDistanciaI06[];
+              this.countAportes();
               this.createChart();
               this.countAportes();
           });
@@ -47,42 +48,55 @@ export class FacDisI06Component implements OnInit {
 
   createChart(){
     this.zone.runOutsideAngular(() => {
+    
       let chart = am4core.create("barChart", am4charts.XYChart);
-  
-      // ... chart code goes here ...
-      chart.paddingRight = 20;
 
+      // Add data
       chart.data = [{
-        "Año": "2014",
-        "Num": 3
+        "year": "2014",
+        "Aporte": this.aport2014
       }, {
-        "Año": "2015",
-        "Num": 6
+        "year": "2015",
+        "Aporte": this.aport2015
       }, {
-        "Año": "2016",
-        "Num": 7
+        "year": "2016",
+        "Aporte": this.aport2016
       }, {
-        "Año": "2017",
-        "Num": 1
+        "year": "2017",
+        "Aporte": this.aport2017
       }, {
-        "Año": "2018",
-        "Num": 9
+        "year": "2018",
+        "Aporte": this.aport2018
       }];
 
+      // Create category axis
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "Año";
-      categoryAxis.title.text = "Año";
+      categoryAxis.dataFields.category = "year";
+      categoryAxis.renderer.opposite = true;
 
+      // Create value axis
       let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Num Proyectos";
-      
-      let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Num";
-    series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-    series.columns.template.fill = am4core.color("#104547"); // fill
-    series.dataFields.valueY = "Num";
-    series.dataFields.categoryX = "Año";
+      valueAxis.renderer.inversed = true;
+      valueAxis.title.text = "Place taken";
+      valueAxis.renderer.minLabelPosition = 0.01;
 
+      // Create series
+      let series1 = chart.series.push(new am4charts.LineSeries());
+      series1.dataFields.valueY = "Aporte";
+      series1.dataFields.categoryX = "year";
+      series1.name = "Aporte";
+      series1.strokeWidth = 3;
+      series1.bullets.push(new am4charts.CircleBullet());
+      series1.tooltipText = "{categoryX}: {valueY}";
+      series1.legendSettings.valueText = "{valueY}";
+      series1.visible = false;
+
+      // Add chart cursor
+      chart.cursor = new am4charts.XYCursor();
+      chart.cursor.behavior = "zoomY";
+
+      // Add legend
+      chart.legend = new am4charts.Legend();
       this.barChart = chart;
     });
   }

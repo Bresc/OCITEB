@@ -24,6 +24,7 @@ export class FacDisF03Component implements OnInit {
     this.service.getFacDistanciaF03()
           .subscribe(res=>{
              this.service.facDisF03Array = res as FacDistanciaF03[];
+             this.countAportes();
              this.createChart();
              this.countAportes();
           });
@@ -50,44 +51,57 @@ export class FacDisF03Component implements OnInit {
 
   createChart(){
     this.zone.runOutsideAngular(() => {
-      let chart = am4core.create("barChart", am4charts.XYChart);
+    
+        let chart = am4core.create("barChart", am4charts.XYChart);
   
-      // ... chart code goes here ...
-      chart.paddingRight = 20;
+        // Add data
+        chart.data = [{
+          "year": "2014",
+          "N° Jovenes Investigadores": this.investi2014
+        }, {
+          "year": "2015",
+          "N° Jovenes Investigadores": this.investi2015
+        }, {
+          "year": "2016",
+          "N° Jovenes Investigadores": this.investi2016
+        }, {
+          "year": "2017",
+          "N° Jovenes Investigadores": this.investi2017
+        }, {
+          "year": "2018",
+          "N° Jovenes Investigadores": this.investi2018
+        }];
+  
+        // Create category axis
+        let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "year";
+        categoryAxis.renderer.opposite = true;
+  
+        // Create value axis
+        let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.inversed = true;
+        valueAxis.title.text = "Place taken";
+        valueAxis.renderer.minLabelPosition = 0.01;
+  
+        // Create series
+        let series1 = chart.series.push(new am4charts.LineSeries());
+        series1.dataFields.valueY =  "N° Jovenes Investigadores";
+        series1.dataFields.categoryX = "year";
+        series1.name = "N° Jovenes Investigadores";
+        series1.strokeWidth = 3;
+        series1.bullets.push(new am4charts.CircleBullet());
+        series1.tooltipText = "{categoryX}: {valueY}";
+        series1.legendSettings.valueText = "{valueY}";
+        series1.visible = false;
 
-      chart.data = [{
-        "Año": "2014",
-        "Num": 3
-      }, {
-        "Año": "2015",
-        "Num": 6
-      }, {
-        "Año": "2016",
-        "Num": 7
-      }, {
-        "Año": "2017",
-        "Num": 1
-      }, {
-        "Año": "2018",
-        "Num": 9
-      }];
-
-      let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "Año";
-      categoryAxis.title.text = "Año";
-
-      let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Num Proyectos";
-      
-      let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Num";
-    series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-    series.columns.template.fill = am4core.color("#104547"); // fill
-    series.dataFields.valueY = "Num";
-    series.dataFields.categoryX = "Año";
-
-      this.barChart = chart;
-    });
+        // Add chart cursor
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.behavior = "zoomY";
+  
+        // Add legend
+        chart.legend = new am4charts.Legend();
+        this.barChart = chart;
+      });
   }
 
 
