@@ -51,38 +51,29 @@ export class FacDisI04Component implements OnInit {
       let chart = am4core.create("barChart", am4charts.XYChart);
   
       // ... chart code goes here ...
-      chart.paddingRight = 20;
-
+      //chart.paddingRight = 20;
+      this.countAportes();
       chart.data = [{
-        "Año": "2014",
-        "Num": 3
+        "Grupo": "TIKA",
+        "Aporte": this.siekAporte
       }, {
-        "Año": "2015",
-        "Num": 6
-      }, {
-        "Año": "2016",
-        "Num": 7
-      }, {
-        "Año": "2017",
-        "Num": 1
-      }, {
-        "Año": "2018",
-        "Num": 9
+        "Grupo": "SIEK",
+        "Aporte": this.ticaAporte
       }];
 
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "Año";
-      categoryAxis.title.text = "Año";
+      categoryAxis.dataFields.category = "Grupo";
+      categoryAxis.title.text = "Grupo";
 
       let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Num Proyectos";
+      valueAxis.title.text = "Aporte";
       
       let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Num";
+    series.name = "Aporte";
     series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
     series.columns.template.fill = am4core.color("#104547"); // fill
-    series.dataFields.valueY = "Num";
-    series.dataFields.categoryX = "Año";
+    series.dataFields.valueY = "Aporte";
+    series.dataFields.categoryX = "Grupo";
 
       this.barChart = chart;
     });

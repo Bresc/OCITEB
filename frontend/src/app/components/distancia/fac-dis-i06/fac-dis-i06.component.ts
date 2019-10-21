@@ -69,16 +69,18 @@ export class FacDisI06Component implements OnInit {
         "Aporte": this.aport2018
       }];
 
+ // Create value axis
+ let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+ valueAxis.renderer.inversed = false;
+ valueAxis.title.text = "Place taken";
+ valueAxis.renderer.minLabelPosition = 0.01;
+
       // Create category axis
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
       categoryAxis.dataFields.category = "year";
-      categoryAxis.renderer.opposite = true;
+      categoryAxis.renderer.opposite = false;
 
-      // Create value axis
-      let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.renderer.inversed = true;
-      valueAxis.title.text = "Place taken";
-      valueAxis.renderer.minLabelPosition = 0.01;
+     
 
       // Create series
       let series1 = chart.series.push(new am4charts.LineSeries());
