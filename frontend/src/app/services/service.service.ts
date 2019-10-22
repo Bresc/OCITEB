@@ -18,6 +18,7 @@ import { FacAgropecuariaI06 } from '../models/fac-agropecuaria-i06';
 import { FacAgropecuariaF01 } from '../models/fac-agropecuaria-f01';
 import { FacAgropecuariaF02 } from '../models/fac-agropecuaria-f02';
 import { FacAgropecuariaF03 } from '../models/fac-agropecuaria-f03';
+import { FacAgropecuariaC01 } from '../models/fac-agropecuaria-c01';
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +42,8 @@ export class ServiceService {
   facAgroI06Array: FacAgropecuariaI06[];
   facAgroF01Array: FacAgropecuariaF01[];
   facAgroF02Array: FacAgropecuariaF02[];
-  facAgroF03Array: FacAgropecuariaF03[]; 
+  facAgroF03Array: FacAgropecuariaF03[];
+  facAgroC01Array: FacAgropecuariaC01[]; 
 
   constructor(private http: HttpClient) {
    }
@@ -116,6 +118,10 @@ export class ServiceService {
 
   getFacAgropecuariaF03(){
     return this.http.get('http://localhost:3000/facAgro/f03');
+  }
+
+  getFacAgropecuariaC01(){
+    return this.http.get('http://localhost:3000/facAgro/c01');
   }
 
 
