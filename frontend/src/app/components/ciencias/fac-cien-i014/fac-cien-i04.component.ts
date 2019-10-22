@@ -38,19 +38,19 @@ export class FacAgroI01Component implements OnInit {
     for(var _i = 0; _i < array.length; _i++){
       if(array[_i].Grupo==="GIBNA"){
         this.gibnaAporte=array[_i].Valor;
-        this.gibnaNumProductos=array[_i].Noproductos;
+        this.gibnaNumProductos=array[_i].Noproductosporgrupo;
       }else if(array[_i].Grupo==="GIPSO"){
         this.gipsoAporte=array[_i].Valor;
-        this.gipsoNumProductos=array[_i].Noproductos;
+        this.gipsoNumProductos=array[_i].Noproductosporgrupo;
       }else if(array[_i].Grupo==="GIDIMEVETZ"){
         this.gidimevetzAporte=array[_i].Valor;
-        this.gidimevetzNumProductos=array[_i].Noproductos;
+        this.gidimevetzNumProductos=array[_i].Noproductosporgrupo;
       }else if(array[_i].Grupo==="GIA"){
         this.giaAporte=array[_i].Valor;
-        this.giaNumProductos=array[_i].Noproductos;
+        this.giaNumProductos=array[_i].Noproductosporgrupo;
       }else if(array[_i].Grupo==="CIDE"){
         this.cideAporte= array[_i].Valor;
-        this.cideNumProductos=array[_i].Noproductos;
+        this.cideNumProductos=array[_i].Noproductosporgrupo;
       }
     }
   }
