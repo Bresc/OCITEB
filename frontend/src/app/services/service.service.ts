@@ -23,6 +23,7 @@ import { FacAgropecuariaC02 } from '../models/fac-agropecuaria-c02';
 import { FacEducacionI01 } from '../models/fac-educacion';
 import{FacCienciasC01} from '../models/fac-ciencias-c01';
 import{FacCienciasC02} from '../models/fac-ciencias-c02';
+import{FacCienciasC0201} from '../models/fac-ciencias-c0201';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,7 @@ export class ServiceService {
   facEduI01Array: FacEducacionI01[];
   facCienC01Array: FacCienciasC01[];
   facCienC02Array: FacCienciasC02[];
+  facCienC0201Array: FacCienciasC0201[];
 
   constructor(private http: HttpClient) {
    }
@@ -142,6 +144,10 @@ export class ServiceService {
 
   getFacCienciasC02(){
     return this.http.get('http://localhost:3000/facCien/c02');
+  }
+
+  getFacCienciasC0201(){
+    return this.http.get('http://localhost:3000/facCien/c0201');
   }
 
   getFacEducacionI01(){
