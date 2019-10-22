@@ -6,9 +6,9 @@ import { ServiceService } from 'src/app/services/service.service';
 import { FacCienciasI02 } from 'src/app/models/fac-ciencias-i02';
 
 @Component({
-  selector: 'app-fac-agro-i02',
-  templateUrl: './fac-agro-i02.component.html',
-  styleUrls: ['./fac-agro-i02.component.css']
+  selector: 'app-fac-cien-i02',
+  templateUrl: './fac-cien-i02.component.html',
+  styleUrls: ['./fac-cien-i02.component.css']
 })
 export class FacCienI02Component implements OnInit {
   private barChart: am4charts.XYChart;
