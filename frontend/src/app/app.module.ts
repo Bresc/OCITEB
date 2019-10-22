@@ -7,12 +7,16 @@ import { BackgroundComponent } from './components/background/background.componen
 import {HttpClientModule} from '@angular/common/http'
 
 import {AppRoutingModule,routingComponents} from './app-routing.module';
+import { FacAgroC021Component } from './components/agropecuarias/fac-agro-c021/fac-agro-c021.component';
+import { FacAgroPb03Component } from './components/agropecuarias/fac-agro-pb03/fac-agro-pb03.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundComponent,
-    routingComponents
+    routingComponents,
+    FacAgroC021Component,
+    FacAgroPb03Component
   ],
   imports: [
     BrowserModule,
