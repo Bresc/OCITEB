@@ -33,6 +33,7 @@ import { FacAgroF03Component } from './components/agropecuarias/fac-agro-f03/fac
 import { FacAgroC01Component } from './components/agropecuarias/fac-agro-c01/fac-agro-c01.component';
 import { FacAgroC02Component } from './components/agropecuarias/fac-agro-c02/fac-agro-c02.component';
 import { FacAgroC021Component } from './components/agropecuarias/fac-agro-c021/fac-agro-c021.component';
+import { FacAgroPb03Component } from './components/agropecuarias/fac-agro-pb03/fac-agro-pb03.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -44,7 +45,7 @@ const routes: Routes = [
     {path: 'agro_f01', component: FacAgroF01Component},{path: 'agro_f02', component: FacAgroF02Component},
     {path: 'educacion', component: EducacionComponent},{path: 'agro_f03', component: FacAgroF03Component},
     {path: 'agro_c01', component: FacAgroC01Component},{path: 'agro_c02', component: FacAgroC02Component},
-    {path: 'agro_c21', component: FacAgroC021Component},
+    {path: 'agro_c21', component: FacAgroC021Component},{path: 'agro_pb03', component: FacAgroPb03Component},
     {path: 'economicas', component: EconomicasComponent},
     {path: 'ciencias', component: CienciasComponent},
     {path: 'derecho', component: DerechoComponent},
@@ -75,5 +76,6 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  FacDisC02Component,FacDisC021Component,FacDisPb03Component,
                                  FacAgroI02Component,FacAgroI03Component,FacAgroI04Component,
                                  FacAgroI05Component,FacAgroI06Component,FacAgroF01Component,
-                                 FacAgroF02Component,FacAgroF03Component,FacAgroC021Component,DuitamaComponent,
+                                 FacAgroF02Component,FacAgroF03Component,FacAgroC021Component,
+                                 FacAgroPb03Component,DuitamaComponent,
                                  FacAgroC01Component,FacAgroC02Component,SogamosoComponent]
