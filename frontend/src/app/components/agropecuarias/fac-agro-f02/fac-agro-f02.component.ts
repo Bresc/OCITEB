@@ -11,14 +11,14 @@ import { FacAgropecuariaF02 } from 'src/app/models/fac-agropecuaria-f02';
   styleUrls: ['./fac-agro-f02.component.css']
 })
 export class FacAgroF02Component implements OnInit {
-  private barChart: am4charts.XYChart;
-  private investigadores2014=0;
-  private investigadores2018=0;
-  private veterinaria2014=0;
-  private ingAgro2014=0;
-  private veterinaria2018=0;
-  private ingAgro2018=0;
-  constructor(private zone: NgZone, private service: ServiceService) { }
+  public barChart: am4charts.XYChart;
+  public investigadores2014=0;
+  public investigadores2018=0;
+  public veterinaria2014=0;
+  public ingAgro2014=0;
+  public veterinaria2018=0;
+  public ingAgro2018=0;
+  constructor(public zone: NgZone, public service: ServiceService) { }
 
   ngOnInit() {
     this.service.getFacAgropecuariaF02()

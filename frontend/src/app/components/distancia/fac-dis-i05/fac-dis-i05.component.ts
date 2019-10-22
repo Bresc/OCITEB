@@ -11,13 +11,13 @@ import { FacDistanciaI05 } from 'src/app/models/fac-distancia-i05';
   styleUrls: ['./fac-dis-i05.component.css']
 })
 export class FacDisI05Component implements OnInit {
-  private barChart: am4charts.XYChart3D;
-  private aport2014=0;
-  private aport2015=0;
-  private aport2016=0;
-  private aport2017=0;
-  private aport2018=0;
-  constructor(private zone: NgZone, private service: ServiceService) { }
+  public barChart: am4charts.XYChart3D;
+  public aport2014=0;
+  public aport2015=0;
+  public aport2016=0;
+  public aport2017=0;
+  public aport2018=0;
+  constructor(public zone: NgZone, public service: ServiceService) { }
 
   ngOnInit() {
     this.service.getFacDistanciaI05()

@@ -11,27 +11,27 @@ import { FacAgropecuariaC02 } from 'src/app/models/fac-agropecuaria-c02';
   styleUrls: ['./fac-agro-c02.component.css']
 })
 export class FacAgroC02Component implements OnInit {
-  private junior2014=0;
-  private asociado2014=0;
-  private senior2014=0;
-  private emerito2014=0;
-  private junior2015=0;
-  private asociado2015=0;
-  private senior2015=0;
-  private emerito2015=0;
-  private junior2016=0;
-  private asociado2016=0;
-  private senior2016=0;
-  private emerito2016=0;
-  private junior2017=0;
-  private asociado2017=0;
-  private senior2017=0;
-  private emerito2017=0;
-  private junior2018=0;
-  private asociado2018=0;
-  private senior2018=0;
-  private emerito2018=0;
-  constructor(private zone: NgZone, private service: ServiceService) { }
+  public junior2014=0;
+  public asociado2014=0;
+  public senior2014=0;
+  public emerito2014=0;
+  public junior2015=0;
+  public asociado2015=0;
+  public senior2015=0;
+  public emerito2015=0;
+  public junior2016=0;
+  public asociado2016=0;
+  public senior2016=0;
+  public emerito2016=0;
+  public junior2017=0;
+  public asociado2017=0;
+  public senior2017=0;
+  public emerito2017=0;
+  public junior2018=0;
+  public asociado2018=0;
+  public senior2018=0;
+  public emerito2018=0;
+  constructor(public zone: NgZone, public service: ServiceService) { }
 
   ngOnInit() {
     this.service.getFacAgropecuariaC02()

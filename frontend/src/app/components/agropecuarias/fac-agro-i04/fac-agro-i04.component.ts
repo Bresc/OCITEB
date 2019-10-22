@@ -11,18 +11,18 @@ import { FacAgropecuariaI04 } from 'src/app/models/fac-agropecuaria-i04';
   styleUrls: ['./fac-agro-i04.component.css']
 })
 export class FacAgroI04Component implements OnInit {
-  private barChart: am4charts.XYChart;
-  private gibnaAporte=0;
-  private gipsoAporte=0;
-  private gidimevetzAporte=0;
-  private giaAporte=0;
-  private cideAporte=0;
-  private gibnaNumProductos=0;
-  private gipsoNumProductos=0;
-  private gidimevetzNumProductos=0;
-  private giaNumProductos=0;
-  private cideNumProductos=0;  
-  constructor(private zone: NgZone,private service: ServiceService) { }
+  public barChart: am4charts.XYChart;
+  public gibnaAporte=0;
+  public gipsoAporte=0;
+  public gidimevetzAporte=0;
+  public giaAporte=0;
+  public cideAporte=0;
+  public gibnaNumProductos=0;
+  public gipsoNumProductos=0;
+  public gidimevetzNumProductos=0;
+  public giaNumProductos=0;
+  public cideNumProductos=0;  
+  constructor(public zone: NgZone,public service: ServiceService) { }
 
   ngOnInit() {
     this.service.getFacAgropecuariaI04()

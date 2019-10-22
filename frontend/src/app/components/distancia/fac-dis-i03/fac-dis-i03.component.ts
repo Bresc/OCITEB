@@ -12,11 +12,11 @@ import { FacDistanciaI03 } from 'src/app/models/fac-distancia-i03';
 })
 export class FacDisI03Component implements OnInit {
 
-  private barChart: am4charts.XYChart;  
-  private entidad2017 = 0;
-  private entidad2018 = 0;
+  public barChart: am4charts.XYChart;  
+  public entidad2017 = 0;
+  public entidad2018 = 0;
 
-  constructor(private zone : NgZone, private service: ServiceService) { }
+  constructor(public zone : NgZone, public service: ServiceService) { }
 
   
   ngOnInit() {
