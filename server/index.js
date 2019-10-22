@@ -105,6 +105,21 @@ app.use('/facDer/f03', require('./routes/facultadDer_f03.routes'));
 app.use('/facDer/c01', require('./routes/facultadDer_c01.routes'));
 app.use('/facDer/c02', require('./routes/facultadDer_c02.routes'));
 
+//Routes Sec Chiquinquira
+
+app.use('/secChi/i01', require('./routes/seccionalChi_I01.routes'));
+app.use('/secChi/i02', require('./routes/seccionalChi_I02.routes'));
+app.use('/secChi/i03', require('./routes/seccionalChi_I03.routes'));
+app.use('/secChi/i05', require('./routes/seccionalChi_I05.routes'));
+app.use('/secChi/i06', require('./routes/seccionalChi_I06.routes'));
+
+app.use('/secChi/f01', require('./routes/seccionalChi_f01.routes'));
+app.use('/secChi/f03', require('./routes/seccionalChi_f03.routes'));
+
+app.use('/secChi/c01', require('./routes/seccionalChi_c01.routes'));
+app.use('/secChi/c02', require('./routes/seccionalChi_c02.routes'));
+
+
 
 //Starting server
 app.listen(app.get('port'), () =>{
