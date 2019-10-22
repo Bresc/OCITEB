@@ -11,37 +11,37 @@ import { FacAgropecuariaC01 } from 'src/app/models/fac-agropecuaria-c01';
   styleUrls: ['./fac-agro-c01.component.css']
 })
 export class FacAgroC01Component implements OnInit {
-  private a12014=0;
-  private a12015=0;
-  private a12016=0;
-  private a12017=0;
-  private a12018=0;
-  private a2014=0;
-  private a2015=0;
-  private a2016=0;
-  private a2017=0;
-  private a2018=0;
-  private b2014=0;
-  private b2015=0;
-  private b2016=0;
-  private b2017=0;
-  private b2018=0;
-  private c2014=0;
-  private c2015=0;
-  private c2016=0;
-  private c2017=0;
-  private c2018=0;
-  private d2014=0;
-  private d2015=0;
-  private d2016=0;
-  private d2017=0;
-  private d2018=0;
-  private r2014=0;
-  private r2015=0;
-  private r2016=0;
-  private r2017=0;
-  private r2018=0;
-  constructor(private zone : NgZone, private service: ServiceService) { }
+  public a12014=0;
+  public a12015=0;
+  public a12016=0;
+  public a12017=0;
+  public a12018=0;
+  public a2014=0;
+  public a2015=0;
+  public a2016=0;
+  public a2017=0;
+  public a2018=0;
+  public b2014=0;
+  public b2015=0;
+  public b2016=0;
+  public b2017=0;
+  public b2018=0;
+  public c2014=0;
+  public c2015=0;
+  public c2016=0;
+  public c2017=0;
+  public c2018=0;
+  public d2014=0;
+  public d2015=0;
+  public d2016=0;
+  public d2017=0;
+  public d2018=0;
+  public r2014=0;
+  public r2015=0;
+  public r2016=0;
+  public r2017=0;
+  public r2018=0;
+  constructor(public zone : NgZone, public service: ServiceService) { }
 
   ngOnInit() {
      this.service.getFacAgropecuariaC01()

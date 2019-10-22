@@ -13,32 +13,32 @@ import { FacDistanciaI01 } from 'src/app/models/fac-distancia-i01';
 })
 export class DistanciaComponent implements OnInit {
 
-  private barChart: am4charts.XYChart;
-  private anio2014=0;
-  private anio2015=0;
-  private anio2016=0;
-  private anio2017=0;
-  private anio2018=0;
+  public barChart: am4charts.XYChart;
+  public anio2014=0;
+  public anio2015=0;
+  public anio2016=0;
+  public anio2017=0;
+  public anio2018=0;
 
-  private semilla2014=0;
-  private semilla2015=0;
-  private semilla2016=0;
-  private semilla2017=0;
-  private semilla2018=0;
+  public semilla2014=0;
+  public semilla2015=0;
+  public semilla2016=0;
+  public semilla2017=0;
+  public semilla2018=0;
 
-  private contra2014=0;
-  private contra2015=0;
-  private contra2016=0;
-  private contra2017=0;
-  private contra2018=0;
+  public contra2014=0;
+  public contra2015=0;
+  public contra2016=0;
+  public contra2017=0;
+  public contra2018=0;
 
-  private sinfin2014=0;
-  private sinfin2015=0;
-  private sinfin2016=0;
-  private sinfin2017=0;
-  private sinfin2018=0;
+  public sinfin2014=0;
+  public sinfin2015=0;
+  public sinfin2016=0;
+  public sinfin2017=0;
+  public sinfin2018=0;
 
-  constructor(private zone : NgZone,private service : ServiceService) { 
+  constructor(public zone : NgZone,public service : ServiceService) { 
     
   }
 

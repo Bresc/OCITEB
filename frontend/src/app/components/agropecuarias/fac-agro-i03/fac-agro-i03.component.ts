@@ -11,38 +11,38 @@ import { FacAgropecuariaI03 } from 'src/app/models/fac-agropecuaria-i03';
   styleUrls: ['./fac-agro-i03.component.css']
 })
 export class FacAgroI03Component implements OnInit {
-  private barChart: am4charts.XYChart;
-  private entidad2014 =0;
-  private entidad2015=0; 
-  private entidad2016=0; 
-  private entidad2017 = 0;
-  private entidad2018 = 0;
-  private cenInvestigacion2014 =0;
-  private cenInvestigacion2015=0; 
-  private cenInvestigacion2016=0; 
-  private cenInvestigacion2017 = 0;
-  private cenInvestigacion2018 = 0;
-  private colciencias2014 =0;
-  private colciencias2015=0; 
-  private colciencias2016=0; 
-  private colciencias2017 = 0;
-  private colciencias2018 = 0;
-  private hospitales2014 =0;
-  private hospitales2015=0; 
-  private hospitales2016=0; 
-  private hospitales2017 = 0;
-  private hospitales2018 = 0;
-  private privadas2014 =0;
-  private privadas2015=0; 
-  private privadas2016=0; 
-  private privadas2017 = 0;
-  private privadas2018 = 0;
-  private ong2014 =0;
-  private ong2015=0; 
-  private ong2016=0; 
-  private ong2017 = 0;
-  private ong2018 = 0;
-  constructor(private zone : NgZone, private service: ServiceService) { }
+  public barChart: am4charts.XYChart;
+  public entidad2014 =0;
+  public entidad2015=0; 
+  public entidad2016=0; 
+  public entidad2017 = 0;
+  public entidad2018 = 0;
+  public cenInvestigacion2014 =0;
+  public cenInvestigacion2015=0; 
+  public cenInvestigacion2016=0; 
+  public cenInvestigacion2017 = 0;
+  public cenInvestigacion2018 = 0;
+  public colciencias2014 =0;
+  public colciencias2015=0; 
+  public colciencias2016=0; 
+  public colciencias2017 = 0;
+  public colciencias2018 = 0;
+  public hospitales2014 =0;
+  public hospitales2015=0; 
+  public hospitales2016=0; 
+  public hospitales2017 = 0;
+  public hospitales2018 = 0;
+  public privadas2014 =0;
+  public privadas2015=0; 
+  public privadas2016=0; 
+  public privadas2017 = 0;
+  public privadas2018 = 0;
+  public ong2014 =0;
+  public ong2015=0; 
+  public ong2016=0; 
+  public ong2017 = 0;
+  public ong2018 = 0;
+  constructor(public zone : NgZone, public service: ServiceService) { }
 
   ngOnInit() {
 
