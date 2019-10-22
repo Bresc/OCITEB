@@ -4,6 +4,7 @@ import * as am4charts from "@amcharts/amcharts4/charts";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import { ServiceService } from 'src/app/services/service.service';
 import { FacAgropecuariaC01 } from 'src/app/models/fac-agropecuaria-c01';
+import { isNull } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-fac-agro-c01',
@@ -56,29 +57,30 @@ export class FacAgroC01Component implements OnInit {
     const array = this.service.facAgroC01Array as FacAgropecuariaC01[];
     for (var _i = 0; _i < array.length; _i++){
         if(array[_i].Anio==="2014"){
-          if(isNaN(array[_i].A1)){
+          if(!isNaN(array[_i].A1)){
             this.a12014=array[_i].A1;
+            console.log(this.a12014);
           }
-          if(isNaN(array[_i].A)){
+          if(!isNaN(array[_i].A)){
             this.a2014=array[_i].A;
           }
-          if(isNaN(array[_i].B)){
+          if(!isNaN(array[_i].B)){
             this.b2014=array[_i].B;
           }
-          if(isNaN(array[_i].C)){
+          if(!isNaN(array[_i].C)){
             this.c2014=array[_i].C;
           }
-          if(isNaN(array[_i].D)){
+          if(!isNaN(array[_i].D)){
             this.d2014=array[_i].D;
           }
-          if(isNaN(array[_i].R)){
+          if(!isNaN(array[_i].R)){
             this.r2014=array[_i].R;
           }
         }else if(array[_i].Anio==="2015"){
-          if(isNaN(array[_i].A1)){
+          if(!isNaN(array[_i].A1)){
             this.a12015=array[_i].A1;
           }
-          if(isNaN(array[_i].A)){
+          if(!isNaN(array[_i].A)){
             this.a2015=array[_i].A;
           }
           if(isNaN(array[_i].B)){
