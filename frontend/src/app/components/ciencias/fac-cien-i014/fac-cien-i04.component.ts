@@ -34,6 +34,7 @@ export class FacAgroI01Component implements OnInit {
   }
 
   countAportes(){
+    const array = this.service.facCienI04Array as FacCienciasI04[];
     for(var _i = 0; _i < array.length; _i++){
       if(array[_i].Grupo==="GIBNA"){
         this.gibnaAporte=array[_i].Valor;
