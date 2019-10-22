@@ -20,18 +20,30 @@ import { FacAgropecuariaF02 } from '../models/fac-agropecuaria-f02';
 import { FacAgropecuariaF03 } from '../models/fac-agropecuaria-f03';
 import { FacAgropecuariaC01 } from '../models/fac-agropecuaria-c01';
 import { FacAgropecuariaC02 } from '../models/fac-agropecuaria-c02';
-import { FacEducacionI01 } from '../models/fac-educacion';
 import{FacCienciasC01} from '../models/fac-ciencias-c01';
 import{FacCienciasC02} from '../models/fac-ciencias-c02';
 import{FacCienciasC0201} from '../models/fac-ciencias-c0201';
 import{FacCienciasF01} from '../models/fac-ciencias-f01';
 import{FacCienciasF02} from '../models/fac-ciencias-f02';
 import{FacCienciasF03} from '../models/fac-ciencias-f03';
+import{FacCienciasI01} from '../models/fac-ciencias-i01';
 import{FacCienciasI02} from '../models/fac-ciencias-i02';
 import{FacCienciasI03} from '../models/fac-ciencias-i03';
-import{FacCienciasI01} from '../models/fac-ciencias-i01';
 import{FacCienciasI04 } from '../models/fac-ciencias-i04';
+import { FacEducacionI01 } from '../models/fac-educacion';
 import { FacEducacionI02 } from '../models/fac-educacion-i02';
+import { FacEducacionI03 } from '../models/fac-educacion-i03';
+import { FacEducacionI04 } from '../models/fac-educacion-i04';
+import { FacEducacionI05 } from '../models/fac-educacion-i05';
+import { FacEducacionI06 } from '../models/fac-educacion-i06';
+import { FacEducacionF01 } from '../models/fac-educacion-f01';
+import { FacEducacionF02 } from '../models/fac-educacion-f02';
+import { FacEducacionF03 } from '../models/fac-educacion-f03';
+import { FacEducacionC01 } from '../models/fac-educacion-c01';
+import { FacEducacionC02 } from '../models/fac-educacion-c02';
+
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -58,8 +70,6 @@ export class ServiceService {
   facAgroF03Array: FacAgropecuariaF03[];
   facAgroC01Array: FacAgropecuariaC01[];
   facAgroC02Array: FacAgropecuariaC02[];
-  facEduI01Array: FacEducacionI01[];
-  facEduI02Array: FacEducacionI02[];
   facCienC01Array: FacCienciasC01[];
   facCienC02Array: FacCienciasC02[];
   facCienC0201Array: FacCienciasC0201[];
@@ -70,10 +80,21 @@ export class ServiceService {
   facCienI03Array: FacCienciasI03[];
   facCienI01Array: FacCienciasI01[];
   facCienI04Array: FacCienciasI04[];
-  
+  facEduI01Array: FacEducacionI01[];
+  facEduI02Array: FacEducacionI02[];
+  facEduI03Array: FacEducacionI03[];
+  facEduI04Array: FacEducacionI04[];
+  facEduI05Array: FacEducacionI05[];
+  facEduI06Array: FacEducacionI06[];
+  facEduF01Array: FacEducacionF01[];
+  facEduF02Array: FacEducacionF02[];
+  facEduF03Array: FacEducacionF03[];
+  facEduC01Array: FacEducacionC01[];
+  facEduC02Array: FacEducacionC02[];
+
 
   constructor(private http: HttpClient) {
-   }
+  }
 
   getFacDistanciaI01(){
     return this.http.get('http://localhost:3000/facDistancia/i01'); 
@@ -203,4 +224,39 @@ export class ServiceService {
     return this.http.get('http://localhost:3000/facEdu/i02');
   }
 
+  getFacEducacionI03(){
+    return this.http.get('http://localhost:3000/facEdu/i03');
+  }
+
+  getFacEducacionI04(){
+    return this.http.get('http://localhost:3000/facEdu/i04');
+  }
+
+  getFacEducacionI05(){
+    return this.http.get('http://localhost:3000/facEdu/i05');
+  }
+
+  getFacEducacionI06(){
+    return this.http.get('http://localhost:3000/facEdu/i06');
+  }
+
+  getFacEducacionF01(){
+    return this.http.get('http://localhost:3000/facEdu/f01');
+  }
+
+  getFacEducacionF02(){
+    return this.http.get('http://localhost:3000/facEdu/f02');
+  }
+
+  getFacEducacionF03(){
+    return this.http.get('http://localhost:3000/facEdu/f03');
+  }
+
+  getFacEducacionC01(){
+    return this.http.get('http://localhost:3000/facEdu/c01');
+  }
+
+  getFacEducacionC02(){
+    return this.http.get('http://localhost:3000/facEdu/c02');
+  }
 }

@@ -5,5 +5,4 @@ export class FacCienciasI02{
     MONTOESPECIEINTERNO:string;
     MONTOEFECTIVOINTERNO:string;
     MONTOEXTERNO1:string;
-    MONTOEXTERNO2:string;
 }

@@ -1,8 +1,9 @@
 export class FacCienciasC0201{
     _id: string;
-    NivelDeEstudio: string;
-    TipoVinculacion: string;
-    DocentesEnGrupos: number;
-    DocentesEnProyectos: number;
-    DocentesReconocidos: number;
+    NIVELDEESTUDIO: string;
+    TIPOVINCULACION: string;
+    DocentesVinculados: number;
+    Docentesengrupos: number;
+    Docentesenproyectos: number;
+    Docentesreconocidos: number;
 }
