@@ -11,6 +11,7 @@ import { FacAgropecuariaF03 } from 'src/app/models/fac-agropecuaria-f03';
   styleUrls: ['./fac-agro-f03.component.css']
 })
 export class FacAgroF03Component implements OnInit {
+  private barChart: am4charts.XYChart;
   private semilleros2014=0;
   private semilleros2015=0;
   private semilleros2016=0;
@@ -23,6 +24,7 @@ export class FacAgroF03Component implements OnInit {
         .subscribe(res=>{
             this.service.facAgroF03Array = res as FacAgropecuariaF03[];
             this.countData();
+            this.createChart();
         });
   }
 
@@ -43,6 +45,58 @@ export class FacAgroF03Component implements OnInit {
             this.semilleros2018=array[_i].Nosemilleros;
           }
       }
+  }
+  createChart(){
+    this.zone.runOutsideAngular(() => {
+    
+        let chart = am4core.create("barChart", am4charts.XYChart);
+  
+        // Add data
+        chart.data = [{
+          "year": "2014",
+          "N° semilleros": this.semilleros2014
+        }, {
+          "year": "2015",
+          "N° semilleros": this.semilleros2015
+        }, {
+          "year": "2016",
+          "N° semilleros": this.semilleros2016
+        }, {
+          "year": "2017",
+          "N° semilleros": this.semilleros2017
+        }, {
+          "year": "2018",
+          "N° semilleros": this.semilleros2018
+        }];
+  
+        // Create category axis
+        let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "year";
+        categoryAxis.renderer.opposite = false;
+  
+        // Create value axis
+        let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.inversed = false;
+        valueAxis.title.text = "Place taken";
+        valueAxis.renderer.minLabelPosition = 0.01;
+  
+        // Create series
+        let series1 = chart.series.push(new am4charts.LineSeries());
+        series1.dataFields.valueY =  "N° semilleros";
+        series1.dataFields.categoryX = "year";
+        series1.name = "N° semilleros";
+        series1.strokeWidth = 3;
+        series1.bullets.push(new am4charts.CircleBullet());
+        series1.tooltipText = "{categoryX}: {valueY}";
+        series1.legendSettings.valueText = "{valueY}";
+        series1.visible = false;
+
+        // Add chart cursor
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.behavior = "zoomY";
+  
+        this.barChart = chart;
+      });
   }
 
 }
