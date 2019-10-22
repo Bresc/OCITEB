@@ -1,4 +1,4 @@
-export class FacAgropecuariaF01{
+export class FacCienciasF01{
     Nombre: string;
     Anio: string;
     Programa: string;

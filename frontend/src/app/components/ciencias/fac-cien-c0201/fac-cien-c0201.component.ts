@@ -11,7 +11,11 @@ import { FacCienciasC0201 } from 'src/app/models/fac-ciencias-c0201';
   styleUrls: ['./fac-cien-c0201.component.css']
 })
 export class FacCienC0201Component implements OnInit {
-  private nivelEstudio = 0;
+    NivelDeEstudio: "";
+    TipoVinculacion: "";
+    DocentesEnGrupos: 0;
+    DocentesEnProyectos: 0;
+    DocentesReconocidos: 0;
   constructor(private zone : NgZone, private service: ServiceService) { }
 
   ngOnInit() {
@@ -25,7 +29,6 @@ export class FacCienC0201Component implements OnInit {
 
   countData(){
     const array = this.service.facCienC0201Array as FacCienciasC0201[];
-    
-    }
+  }
   }
 

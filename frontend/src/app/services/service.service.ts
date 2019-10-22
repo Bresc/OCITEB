@@ -30,7 +30,7 @@ import{FacCienciasF03} from '../models/fac-ciencias-f03';
 import{FacCienciasI02} from '../models/fac-ciencias-i02';
 import{FacCienciasI03} from '../models/fac-ciencias-i03';
 import{FacCienciasI01} from '../models/fac-ciencias-i01';
-import{FacCienciasI04} from '../models/fac-ciencias-i04';
+import{FacCienciasI04 } from '../models/fac-ciencias-i04';
 
 @Injectable({
   providedIn: 'root'

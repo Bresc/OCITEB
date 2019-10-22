@@ -1,9 +1,6 @@
-export class FacCienciasI02{
+export class FacCienciasI03{
     _id: string;
-    PROYECTO:string;
-    ANIOEJECUCION:string;
-    MONTOESPECIEINTERNO:string;
-    MONTOEFECTIVOINTERNO:string;
-    MONTOEXTERNO1:string;
-    MONTOEXTERNO2:string;
+    ANIOEJECUCION: string;
+    MONTOEXTERNO1: number;
+    TIPODEENTIDAD: String;
 }
