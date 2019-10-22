@@ -37,8 +37,8 @@ export class FacAgroI02Component implements OnInit {
     this.service.getFacAgropecuariaI02()
           .subscribe(res=>{
              this.service.facAgroI02Array = res as FacAgropecuariaI02[];
-             this.createChart();
              this.countAportes();
+             this.createChart();
           });
   }
 
@@ -85,46 +85,88 @@ export class FacAgroI02Component implements OnInit {
     }
   }
 
-  createChart(){
+  createChart() {
     this.zone.runOutsideAngular(() => {
+    
       let chart = am4core.create("barChart", am4charts.XYChart);
-  
-      // ... chart code goes here ...
-      chart.paddingRight = 20;
 
+      // Add data
       chart.data = [{
-        "Año": "2014",
-        "Num": 3
+        "year": "2014",
+        "Aporte Especie UPTC": this.especie2014,
+        "Aporte Efectivo UPTC": this.efectivo2014,
+        "Aporte Externok": this.externo2014
       }, {
-        "Año": "2015",
-        "Num": 6
+        "year": "2015",
+        "Aporte Especie UPTC": this.especie2015,
+        "Aporte Efectivo UPTC": this.efectivo2015,
+        "Aporte Externok": this.externo2015
       }, {
-        "Año": "2016",
-        "Num": 7
+        "year": "2016",
+        "Aporte Especie UPTC": this.especie2016,
+        "Aporte Efectivo UPTC": this.efectivo2016,
+        "Aporte Externok": this.externo2016
       }, {
-        "Año": "2017",
-        "Num": 1
+        "year": "2017",
+        "Aporte Especie UPTC": this.especie2017,
+        "Aporte Efectivo UPTC": this.efectivo2017,
+        "Aporte Externok": this.externo2017
       }, {
-        "Año": "2018",
-        "Num": 9
+        "year": "2018",
+        "Aporte Especie UPTC": this.especie2018,
+        "Aporte Efectivo UPTC": this.efectivo2018,
+        "Aporte Externok": this.externo2018
       }];
 
+      // Create category axis
       let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "Año";
-      categoryAxis.title.text = "Año";
+      categoryAxis.dataFields.category = "year";
+      categoryAxis.renderer.opposite = false;
 
+      // Create value axis
       let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Num Proyectos";
-      
-      let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Num";
-    series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-    series.columns.template.fill = am4core.color("#104547"); // fill
-    series.dataFields.valueY = "Num";
-    series.dataFields.categoryX = "Año";
+      valueAxis.renderer.inversed = false;
+      valueAxis.title.text = "Place taken";
+      valueAxis.renderer.minLabelPosition = 0.01;
 
+      // Create series
+      let series1 = chart.series.push(new am4charts.LineSeries());
+      series1.dataFields.valueY = "Aporte Especie UPTC";
+      series1.dataFields.categoryX = "year";
+      series1.name = "Aporte Especie UPTC";
+      series1.strokeWidth = 3;
+      series1.bullets.push(new am4charts.CircleBullet());
+      series1.tooltipText = "Place taken by {name} in {categoryX}: {valueY}";
+      series1.legendSettings.valueText = "{valueY}";
+      series1.visible = false;
+
+      let series2 = chart.series.push(new am4charts.LineSeries());
+      series2.dataFields.valueY = "Aporte Efectivo UPTC";
+      series2.dataFields.categoryX = "year";
+      series2.name = 'Aporte Efectivo UPTC';
+      series2.strokeWidth = 3;
+      series2.bullets.push(new am4charts.CircleBullet());
+      series2.tooltipText = "Place taken by {name} in {categoryX}: {valueY}";
+      series2.legendSettings.valueText = "{valueY}";
+
+      let series3 = chart.series.push(new am4charts.LineSeries());
+      series3.dataFields.valueY = "Aporte Externok";
+      series3.dataFields.categoryX = "year";
+      series3.name = 'Aporte Externok';
+      series3.strokeWidth = 3;
+      series3.bullets.push(new am4charts.CircleBullet());
+      series3.tooltipText = "Place taken by {name} in {categoryX}: {valueY}";
+      series3.legendSettings.valueText = "{valueY}";
+
+      // Add chart cursor
+      chart.cursor = new am4charts.XYCursor();
+      chart.cursor.behavior = "zoomY";
+
+      // Add legend
+      chart.legend = new am4charts.Legend();
       this.barChart = chart;
     });
+   
   }
 
 }

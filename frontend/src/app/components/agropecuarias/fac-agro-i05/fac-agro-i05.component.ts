@@ -23,8 +23,8 @@ export class FacAgroI05Component implements OnInit {
     this.service.getFacAgropecuariaI05()
           .subscribe(res=>{
              this.service.facAgroI05Array = res as FacAgropecuariaI05[];
-             this.createChart();
              this.countAportes();
+             this.createChart();
           });
   }
 
@@ -57,44 +57,52 @@ export class FacAgroI05Component implements OnInit {
 
   createChart(){
     this.zone.runOutsideAngular(() => {
-      let chart = am4core.create("barChart", am4charts.XYChart);
-  
-      // ... chart code goes here ...
-      chart.paddingRight = 20;
+      var chart = am4core.create("barChart", am4charts.XYChart3D);
 
+      // Add data
       chart.data = [{
-        "Año": "2014",
-        "Num": 3
+        "year": 2014,
+        "income": this.aport2014,
+        "color": chart.colors.next()
       }, {
-        "Año": "2015",
-        "Num": 6
+        "year": 2015,
+        "income": this.aport2015,
+        "color": chart.colors.next()
       }, {
-        "Año": "2016",
-        "Num": 7
+        "year": 2016,
+        "income": this.aport2016,
+        "color": chart.colors.next()
       }, {
-        "Año": "2017",
-        "Num": 1
+        "year": 2017,
+        "income": this.aport2017,
+        "color": chart.colors.next()
       }, {
-        "Año": "2018",
-        "Num": 9
+        "year": 2018,
+        "income": this.aport2018,
+        "color": chart.colors.next()
       }];
-
-      let categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
-      categoryAxis.dataFields.category = "Año";
-      categoryAxis.title.text = "Año";
-
-      let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-      valueAxis.title.text = "Num Proyectos";
       
-      let series = chart.series.push(new am4charts.ColumnSeries());
-    series.name = "Num";
-    series.columns.template.tooltipText = "Series: {name}\nCategory: {categoryX}\nValue: {valueY}";
-    series.columns.template.fill = am4core.color("#104547"); // fill
-    series.dataFields.valueY = "Num";
-    series.dataFields.categoryX = "Año";
+      // Create axes
+      var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+      categoryAxis.dataFields.category = "year";
+      categoryAxis.numberFormatter.numberFormat = "#";
+      categoryAxis.renderer.inversed = true;
+      
+      var  valueAxis = chart.xAxes.push(new am4charts.ValueAxis()); 
+      
+      // Create series
+      var series = chart.series.push(new am4charts.ColumnSeries3D());
+      series.dataFields.valueX = "income";
+      series.dataFields.categoryY = "year";
+      series.name = "Income";
+      series.columns.template.propertyFields.fill = "color";
+      series.columns.template.tooltipText = "{valueX}";
+      series.columns.template.column3D.stroke = am4core.color("#fff");
+      series.columns.template.column3D.strokeOpacity = 0.2;
 
       this.barChart = chart;
-    });
+      
+      }); // end am4core.ready()
   }
 
 }
