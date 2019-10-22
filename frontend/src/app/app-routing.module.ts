@@ -27,6 +27,7 @@ import { FacAgroI04Component } from './components/agropecuarias/fac-agro-i04/fac
 import { FacAgroI03Component } from './components/agropecuarias/fac-agro-i03/fac-agro-i03.component';
 import { FacAgroI05Component } from './components/agropecuarias/fac-agro-i05/fac-agro-i05.component';
 import { FacAgroI06Component } from './components/agropecuarias/fac-agro-i06/fac-agro-i06.component';
+import { FacAgroF01Component } from './components/agropecuarias/fac-agro-f01/fac-agro-f01.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/home',pathMatch: 'full'},
@@ -35,6 +36,7 @@ const routes: Routes = [
     {path: 'agro_i02', component: FacAgroI02Component},
     {path: 'agro_i04', component: FacAgroI04Component},{path: 'agro_i03', component: FacAgroI03Component},
     {path: 'agro_i05', component: FacAgroI05Component},{path: 'agro_i06', component: FacAgroI06Component},
+    {path: 'agro_f01', component: FacAgroF01Component},
     {path: 'educacion', component: EducacionComponent},
     {path: 'economicas', component: EconomicasComponent},
     {path: 'ciencias', component: CienciasComponent},
@@ -65,5 +67,5 @@ export const routingComponents = [CarouselComponent,AgropecuariasComponent,
                                  FacDisF02Component,FacDisF03Component, FacDisC01Component,
                                  FacDisC02Component,FacDisC021Component,FacDisPb03Component,
                                  FacAgroI02Component,FacAgroI03Component,FacAgroI04Component,
-                                 FacAgroI05Component,FacAgroI06Component,
+                                 FacAgroI05Component,FacAgroI06Component,FacAgroF01Component,
                                  DuitamaComponent, SogamosoComponent]
