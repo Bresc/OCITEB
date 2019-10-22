@@ -36,7 +36,7 @@
             <div class="dropdown-menu">
                 <a class="dropdown-item" routerLink="/agro_c01">C01 Grupos de investigación categorizados por Colciencias</a>
                 <a class="dropdown-item" routerLink="/agro_c02">C02 Investigadores reconocidos</a>
-                <a class="dropdown-item" routerLink="/agro_c021">C02.1 Investigadores docentes según nivel de estudios y tipo de vinculación</a>
+                <a class="dropdown-item" routerLink="/agro_c03">C02.1 Investigadores docentes según nivel de estudios y tipo de vinculación</a>
             </div>
         </div>
         <div class="btn-group">
@@ -46,76 +46,43 @@
                 Produccion Bibliográfica
             </button>
             <div class="dropdown-menu">
-                <a class="dropdown-item" routerLink="/dis_pb03">PB03 Número de libros sello editorial Uptc</a>
+                <a class="dropdown-item" href="#">PB03 Número de libros sello editorial Uptc</a>
             </div>
         </div>
     </div>
     <div class="col-md-12 mt-4">
         <div class="container">
-            <div class="row"><h1>Facultad de Ciencias Agropecuarias</h1></div>
-            <div class="row"> <h3>I02. Inversión en I+D a nivel de proyectos</h3> </div>
-            <div class="row" id="barChart" style="width: 170%; height: 500px">
-            </div>
-            <div class="row" style="width: 170%; height: 500px">
+            <div class="row"><h1>Facultad de ciencias agropecuarias</h1></div>
+            <div class="row"> <h3>F02. Jóvenes Investigadores Colciencias</h3> </div>
+            <div class="row">
+                <div class="col mt-4" id="barChart" style="width: 700px; height: 500px">
+                </div>
                 <div class="col mt-4" id="chart">
                     <table class="table table-striped table-bordered" >
-                        <thead class="thead-dark">
+                        <thead>
                             <tr>
                                 <th>Año</th>
-                                <th>Aporte Especie UPTC</th>
-                                <th>Aporte Efectivo UPTC</th>
-                                <th>Aporte Externo</th>
-                                <th>Total Proyectos</th>
+                                <th>N°Jovenes Investigadores</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>2014</td>
-                                <td>{{especie2014}}</td>
-                                <td>{{efectivo2014}}</td>
-                                <td>{{externo2014}}</td>
-                                <td>{{especie2014+efectivo2014+externo2014}}</td>
-                            </tr>
-                            <tr>
-                                <td>2015</td>
-                                <td>{{especie2015}}</td>
-                                <td>{{efectivo2015}}</td>
-                                <td>{{externo2015}}</td>
-                                <td>{{especie2015+efectivo2015+externo2015}}</td>
-                            </tr>
-                            <tr>
-                                <td>2016</td>
-                                <td>{{especie2016}}</td>
-                                <td>{{efectivo2016}}</td>
-                                <td>{{externo2016}}</td>
-                                <td>{{especie2016+efectivo2016+externo2016}}</td>
-                            </tr>
-                            <tr>
-                                <td>2017</td>
-                                <td>{{especie2017}}</td>
-                                <td>{{efectivo2017}}</td>
-                                <td>{{externo2017}}</td>
-                                <td>{{especie2017+efectivo2017+externo2017}}</td>
+                                <td>{{investigadores2014}}</td>
                             </tr>
                             <tr>
                                 <td>2018</td>
-                                <td>{{especie2018}}</td>
-                                <td>{{efectivo2018}}</td>
-                                <td>{{externo2018}}</td>
-                                <td>{{especie2018+efectivo2018+externo2018}}</td>
+                                <td>{{investigadores2018}}</td>
                             </tr>
                             <tr>
                                 <td>Total</td>
-                                <td>{{especie2014+especie2015+especie2016+especie2017+especie2018}}</td>
-                                <td>{{efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018}}</td>
-                                <td>{{externo2014+externo2015+externo2016+externo2017+externo2018}}</td>
-                                <td>{{especie2014+especie2015+especie2016+especie2017+especie2018+efectivo2014+efectivo2015+efectivo2016+efectivo2017+efectivo2018+externo2014+externo2015+externo2016+externo2017+externo2018}}</td>
+                                <td>{{investigadores2014+investigadores2018}}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
-        
-        
+        </div>
+        <div id="chartdiv" style="width: 100%; height: 600px;"> </div>
     </div>
 </div>

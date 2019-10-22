@@ -12,7 +12,7 @@ import {AppRoutingModule,routingComponents} from './app-routing.module';
   declarations: [
     AppComponent,
     BackgroundComponent,
-    routingComponents  
+    routingComponents
   ],
   imports: [
     BrowserModule,
