@@ -31,7 +31,7 @@ export class FacCienf01Component implements OnInit {
   constructor(private zone : NgZone, private service: ServiceService) { }
 
   ngOnInit() {
-     this.service.getFacCienciasf01()
+     this.service.getFacCienciasF01()
           .subscribe(res=>{
               this.service.facCienF01Array = res as FacCienciasF01[];
               this.countData();
