@@ -7,7 +7,6 @@ import { BackgroundComponent } from './components/background/background.componen
 import {HttpClientModule} from '@angular/common/http'
 
 import {AppRoutingModule,routingComponents} from './app-routing.module';
-<<<<<<< HEAD
 import { FacCienC01Component } from './components/ciencias/fac-cien-c01/fac-cien-c01.component';
 import { FacCienC02Component } from './components/ciencias/fac-cien-c02/fac-cien-c02.component';
 import { FacCienC0201Component } from './components/ciencias/fac-cien-c0201/fac-cien-c0201.component';
@@ -20,7 +19,6 @@ import { FacCienI04Component } from './components/ciencias/fac-cien-i04/fac-cien
 import { FacCienI05Component } from './components/ciencias/fac-cien-i05/fac-cien-i05.component';
 import { FacCienI06Component } from './components/ciencias/fac-cien-i06/fac-cien-i06.component';
 import { FacCienPb03Component } from './components/ciencias/fac-cien-pb03/fac-cien-pb03.component';
-=======
 import { FacEduI03Component } from './components/educacion/fac-edu-i03/fac-edu-i03.component';
 import { FacEduI04Component } from './components/educacion/fac-edu-i04/fac-edu-i04.component';
 import { FacEduI05Component } from './components/educacion/fac-edu-i05/fac-edu-i05.component';
@@ -32,14 +30,13 @@ import { FacEduC01Component } from './components/educacion/fac-edu-c01/fac-edu-c
 import { FacEduC02Component } from './components/educacion/fac-edu-c02/fac-edu-c02.component';
 import { FacEduC021Component } from './components/educacion/fac-edu-c021/fac-edu-c021.component';
 import { FacEduPb03Component } from './components/educacion/fac-edu-pb03/fac-edu-pb03.component';
->>>>>>> cfcc86487d94377d1b3570f7b48cfb5ebd207d83
+
 
 @NgModule({
   declarations: [
     AppComponent,
     BackgroundComponent,
     routingComponents,
-<<<<<<< HEAD
     FacCienC01Component,
     FacCienC02Component,
     FacCienC0201Component,
@@ -51,8 +48,7 @@ import { FacEduPb03Component } from './components/educacion/fac-edu-pb03/fac-edu
     FacCienI04Component,
     FacCienI05Component,
     FacCienI06Component,
-    FacCienPb03Component
-=======
+    FacCienPb03Component,
     FacEduI03Component,
     FacEduI04Component,
     FacEduI05Component,
@@ -64,7 +60,6 @@ import { FacEduPb03Component } from './components/educacion/fac-edu-pb03/fac-edu
     FacEduC02Component,
     FacEduC021Component,
     FacEduPb03Component
->>>>>>> cfcc86487d94377d1b3570f7b48cfb5ebd207d83
   ],
   imports: [
     BrowserModule,

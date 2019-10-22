@@ -11,26 +11,26 @@ import { FacEducacionI02 } from 'src/app/models/fac-educacion-i02';
   styleUrls: ['./fac-edu-i02.component.css']
 })
 export class FacEduI02Component implements OnInit {
-  private barChart: am4charts.XYChart;
+  public barChart: am4charts.XYChart;
 
-  private especie2014=0;
-  private especie2015=0;
-  private especie2016=0;
-  private especie2017=0;
-  private especie2018=0;
+  public especie2014=0;
+  public especie2015=0;
+  public especie2016=0;
+  public especie2017=0;
+  public especie2018=0;
 
-  private efectivo2014=0;
-  private efectivo2015=0;
-  private efectivo2016=0;
-  private efectivo2017=0;
-  private efectivo2018=0;
+  public efectivo2014=0;
+  public efectivo2015=0;
+  public efectivo2016=0;
+  public efectivo2017=0;
+  public efectivo2018=0;
 
-  private externo2014=0;
-  private externo2015=0;
-  private externo2016=0;
-  private externo2017=0;
-  private externo2018=0;
-  constructor(private zone: NgZone, private service: ServiceService) { }
+  public externo2014=0;
+  public externo2015=0;
+  public externo2016=0;
+  public externo2017=0;
+  public externo2018=0;
+  constructor(public zone: NgZone, public service: ServiceService) { }
 
   ngOnInit() {
       this.service.getFacEducacionI02()
